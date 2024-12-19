@@ -7,19 +7,20 @@ function App() {
   return (
     <>
       <h1>Counter</h1>
-      
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          +
-        </button>
+      <div className='counter-container'>
+        <div className="card">
+          <button className="additionButton" onClick={() => setCount((count) => count + 1)}>
+            +
+          </button>
+        </div>
+        <div className="card">
+          <button className='subtractionButton' onClick={() => setCount((count) => count - 1)}>
+            -
+          </button>
+        </div>
       </div>
       <div className="card">
-        <button onClick={() => setCount((count) => count - 1)}>
-          -
-        </button>
-      </div>
-      <div className="card">
-        <p>{count}</p>
+        <p className='count'>{count}</p>
       </div>
     </>
   )
